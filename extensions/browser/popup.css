@@ -1,0 +1,169 @@
+body {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  color: #f5f4ef;
+  background: #191b1d;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #393b3d;
+  background: #202224;
+}
+
+.brand {
+  color: #efbc80;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+  font-size: 16px;
+}
+
+.status-indicator {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: #393b3d;
+  color: #b7b8b4;
+}
+
+.status-indicator.connected {
+  background: #2d4a36;
+  color: #8cdeaa;
+}
+
+.status-indicator.disconnected {
+  background: #5c2828;
+  color: #fca5a5;
+}
+
+#main-content {
+  padding: 16px;
+  flex: 1;
+}
+
+.session-label {
+  font-size: 11px;
+  color: #92948f;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.session-value {
+  font-size: 14px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.state-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #282b2c;
+  border: 1px solid #484642;
+}
+
+.state-badge.working {
+  color: #818cf8;
+  border-color: #4f46e5;
+  background: #312e81;
+}
+
+.state-badge.ready, .state-badge.completed {
+  color: #34d399;
+  border-color: #059669;
+  background: #064e3b;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 20px 0;
+  color: #b7b8b4;
+}
+
+.help-text {
+  font-size: 12px;
+  color: #92948f;
+  margin-bottom: 16px;
+}
+
+ul#session-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+ul#session-list li {
+  padding: 8px 12px;
+  background: #282b2c;
+  border: 1px solid #484642;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul#session-list li:hover {
+  background: #343738;
+}
+
+ul#session-list li.selected {
+  border-color: #efbc80;
+  background: #3f3627;
+}
+
+.actions {
+  padding: 16px;
+  border-top: 1px solid #393b3d;
+  background: #202224;
+}
+
+button {
+  appearance: none;
+  cursor: pointer;
+  border: 1px solid #494946;
+  border-radius: 8px;
+  background: #282b2c;
+  color: #f5f4ef;
+  font: 600 13px/1.3 Inter, ui-sans-serif, system-ui, sans-serif;
+  padding: 10px 16px;
+  width: 100%;
+  transition: all 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #343738;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: #edbd85;
+  border-color: #edbd85;
+  color: #23201b;
+}
+
+button.primary:hover:not(:disabled) {
+  background: #f6cfa2;
+}
+
+[hidden] {
+  display: none !important;
+}

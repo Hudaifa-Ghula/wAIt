@@ -1,0 +1,90 @@
+{
+  "name": "wait-companion-vscode",
+  "displayName": "wAIt Companion",
+  "description": "Learn about your Codex or Antigravity task, or watch Instagram Reels while it works.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "publisher": "wait-companion",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.cjs",
+  "contributes": {
+    "commands": [
+      {
+        "command": "wait.showStatus",
+        "title": "wAIt: Show Status"
+      },
+      {
+        "command": "wait.startServer",
+        "title": "wAIt: Start Bridge Server"
+      },
+      {
+        "command": "wait.stopServer",
+        "title": "wAIt: Stop Bridge Server"
+      },
+      {
+        "command": "wait.linkBrowser",
+        "title": "wAIt: Link Browser Extension"
+      },
+      {
+        "command": "wait.unlinkBrowser",
+        "title": "wAIt: Unlink Browser Extension"
+      },
+      {
+        "command": "wait.simulateAgentStart",
+        "title": "wAIt: Simulate Agent Start"
+      },
+      {
+        "command": "wait.simulateAgentStop",
+        "title": "wAIt: Simulate Agent Stop"
+      },
+      {
+        "command": "wait.setGroqKey",
+        "title": "wAIt: Set Groq API Key"
+      },
+      {
+        "command": "wait.shareSelection",
+        "title": "wAIt: Teach Selected Code"
+      }
+    ],
+    "configuration": {
+      "title": "wAIt Companion",
+      "properties": {
+        "wait.browserExtensionId": {
+          "type": "string",
+          "default": "",
+          "pattern": "^([a-p]{32})?$",
+          "markdownDescription": "Chrome/Edge extension ID for the wAIt browser companion. Set this once and the native messaging host will be registered automatically on every startup."
+        },
+        "wait.browser": {
+          "type": "string",
+          "default": "opera",
+          "enum": [
+            "opera",
+            "chrome",
+            "edge"
+          ],
+          "markdownDescription": "Which browser to register the native messaging host for."
+        },
+        "wait.shareContext": {
+          "type": "boolean",
+          "default": false,
+          "scope": "resource",
+          "markdownDescription": "Allow selected project context to be sent to the Groq tutor."
+        }
+      }
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/node": "^22.0.0"
+  }
+}

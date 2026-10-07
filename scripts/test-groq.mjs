@@ -1,0 +1,10 @@
+import path from 'node:path';
+import {writeFile,mkdir} from 'node:fs/promises';
+import {loadGroqKey} from '../src/bridge/windows.mjs';
+import {createTutor} from '../src/bridge/tutor.mjs';
+import {sanitizeContext} from '../src/bridge/context.mjs';
+const key=await loadGroqKey(path.resolve('.wait/runtime'));
+if(!key)throw new Error('No Groq key configured.');
+const lesson=await createTutor(key).generate({session:{key:'demo:smoke',runId:'smoke',label:'Explain a cancellation controller'},context:sanitizeContext({source:'selected text',text:'const controller = new AbortController(); const response = fetch(url, { signal: controller.signal }); function onAgentFinished() { controller.abort(); }'}),memory:[]});
+await mkdir('.wait-setup',{recursive:true});await writeFile('.wait-setup/groq-smoke.json',JSON.stringify(lesson,null,2));
+console.log(`Groq smoke test passed: ${lesson.model}, ${lesson.summary.split(/\s+/).length} words. No API key was logged.`);

@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "wAIt — Learn while your agent works",
+  "version": "0.1.0",
+  "description": "Learn about your coding task or watch Instagram Reels, then return to your agent after 15 seconds.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "nativeMessaging",
+    "storage",
+    "alarms",
+    "notifications",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.instagram.com/*"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "action": {
+    "default_title": "wAIt",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.instagram.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwbYjk2oBWsygJ55RH2s3FCvZ08DUTarsyzi6i2vkaAg/qKvyz+gJgAbmZyX08PEjUfi2LjyMSJiAlgMxRZZqykQS5IPvlou/icK6pVPLTro5n3MLmCW2HctXnUTnu+Y1VSfA2l1YC941WUQR/3/cYXGL5zova3sluLnTb8gw/Dt3omt9A5pJZXgyVwvifUbDG1ZaqRQVxUr7K/suSP1YInZR1fnfghmqpyJT9WygP0ZOpRiqIp9awL0SUljwxeKee2kGYUdZFhTBV5vhOvaqLE8qxqgUn1qHjdNQ46LnAwcQk89ljKgF30dFMJPrsF61LiKzVSk+jooZjp9PJsA8TwIDAQAB"
+}

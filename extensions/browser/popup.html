@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wAIt Companion</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="brand">wAIt</div>
+    <div id="connection-status" class="status-indicator">Connecting...</div>
+  </div>
+
+  <div id="main-content">
+    <div id="no-task" class="empty-state" hidden>
+      <p>No agent task detected yet.</p>
+      <p class="help-text">Send a new prompt in the project monitored by wAIt. Opening Antigravity alone does not start a waiting session. If nothing opens, run npm run diagnose in the wAIt terminal.</p>
+    </div>
+    <div id="session-info" hidden>
+      <div class="session-label">Active Agent</div>
+      <div id="agent-name" class="session-value">-</div>
+
+      <div class="session-label">Status</div>
+      <div id="agent-state" class="session-value state-badge">-</div>
+    </div>
+
+    <div id="session-list-container" hidden>
+      <div class="session-label">Available Sessions</div>
+      <ul id="session-list"></ul>
+    </div>
+
+    <div id="no-connection" class="empty-state" hidden>
+      <p>Not connected to the local wAIt bridge.</p>
+      <p class="help-text">Start the local wAIt companion and link Opera GX. Learn opens automatically for a detected task.</p>
+      <button id="btn-reconnect" class="secondary">Retry Connection</button>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button id="btn-learn" class="secondary" style="margin-bottom: 8px; width: 100%;">Open Learning Hub</button>
+    <button id="btn-scroll" class="secondary" style="margin-bottom: 8px; width: 100%;">Scroll Instagram Reels</button>
+    <button id="btn-return" class="primary" disabled>Back to AI ↗</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

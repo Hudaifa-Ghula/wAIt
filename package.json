@@ -1,0 +1,29 @@
+{
+  "name": "wait-companion",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "description": "Learn about your Codex or Antigravity task, or watch Instagram Reels while it works.",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prestart": "npm run build",
+    "start": "node scripts/start.mjs",
+    "diagnose": "node scripts/diagnose.mjs",
+    "audit:public": "node scripts/audit-public.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node --test tests/browser-flow.test.mjs",
+    "check": "npm run build && npm test",
+    "package": "node scripts/package.mjs",
+    "setup:key": "node scripts/setup.mjs --key",
+    "setup": "node scripts/setup.mjs"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^4.0.0",
+    "esbuild": "^0.28.2",
+    "playwright": "^1.63.0"
+  }
+}
