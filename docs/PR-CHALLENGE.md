@@ -4,15 +4,15 @@
 
 The best contribution wins access to the creator's programming-learning platform, planned to launch in **October 2026**. The winner can use the access themselves or gift it to someone else.
 
-**Status: preparing for public launch.** The confirmed details are below. Items marked TBA have not been decided; they are not promises of a particular subscription plan or duration.
+**Status: source is public; competition opening to be announced.** The confirmed details are below. Items marked TBA have not been decided; they are not promises of a particular subscription plan or duration.
 
 ## At a glance
 
 | Item | Detail |
 | --- | --- |
-| Submission | A pull request to the public wAIt repository |
+| Submission | A pull request to [Hudaifa-Ghula/wAIt](https://github.com/Hudaifa-Ghula/wAIt/pulls) |
 | Merge requirement | **None.** A PR can qualify and win without being merged. |
-| Opens | With the public launch; announcement/link TBA |
+| Opens | After the remaining prize and participation details are finalized; announcement TBA |
 | Deadline | End of **November 7, 2026**, Africa/Tripoli (UTC+2). Submit before **November 8 at 00:00** local time (**November 7 at 22:00 UTC**). Entries are accepted throughout November 7. |
 | Prize | Platform access for the winner **or a person they choose to gift it to** |
 | Platform | Programming-learning platform planned for October 2026; name/link TBA |
@@ -77,7 +77,7 @@ The repository can be published before the competition opens. A preview announce
 > AI-assisted PRs are welcome. Show what you built, why it matters, and how you tested it.
 > Your PR does not need to be merged to qualify or win.
 >
-> Repo: [REPOSITORY LINK]
-> Challenge details: [CHALLENGE LINK]
+> Repo: https://github.com/Hudaifa-Ghula/wAIt
+> Challenge details: https://github.com/Hudaifa-Ghula/wAIt/blob/main/docs/PR-CHALLENGE.md
 
-Replace the two links and publish the repository before using the announcement. Change “preparing” to “running” only after entry details are finalized and submissions are open.
+The source is now public. Change “preparing” to “running” only after entry details are finalized and competition submissions are open.

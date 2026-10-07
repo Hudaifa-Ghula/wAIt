@@ -2,7 +2,7 @@
 
 wAIt turns agent waiting time into a short lesson or a bounded Reels break. Good contributions make starting, stopping, and returning reliable and understandable.
 
-The project is [MIT licensed](LICENSE), and contributions are welcome under that license. The first public release and [best PR challenge](docs/PR-CHALLENGE.md) are being prepared. The challenge's remaining prize and participation details are TBA; submissions open with the announced public launch once those details are finalized.
+The source is public and [MIT licensed](LICENSE); contributions are welcome under that license. The [best PR challenge](docs/PR-CHALLENGE.md) is being prepared. Its remaining prize and participation details are TBA; competition entries open after those details are finalized and the opening is announced.
 
 ## Local development
 

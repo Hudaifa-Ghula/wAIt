@@ -5,21 +5,21 @@ Target: a source-only, experimental 0.1.0 release. Keep the existing checkout; i
 ## Before publication
 
 - [x] Add the MIT license, link it from the README, and set MIT in the package metadata.
-- [ ] Run `npm ci`, `npx playwright install chromium`, `npm run check`, and `npm run audit:public`.
-- [ ] Run `npm audit` and review any remaining dependency advisories, including build and packaging tools.
+- [x] Verify a clean source clone: `npm ci`, `npm run check`, and `npm run audit:public -- --staged` passed on October 7, 2026 (34 tests, zero scan findings). Local browser tests used an already-installed Playwright Chromium; new machines need `npx playwright install chromium`.
+- [x] Review dependency advisories: the clean install reported zero npm vulnerabilities on October 7, 2026, including development tools.
 - [ ] Smoke-test a clean source checkout on Windows: setup without a key, start one task, switch to Reels, complete three tasks, exercise the finish-reel modal, and test Back to AI. Test lessons separately with a private key and explicit sharing.
-- [ ] Confirm the README's integration limitations match the actual release. Do not claim all agent versions or approval states are supported.
-- [ ] Choose a Git commit identity. Use a GitHub-provided no-reply address if you do not want a personal email in public commit metadata.
-- [ ] Inspect the candidate file list, then stage only the intended source, docs, tests, configuration, and lockfile. Run `npm run audit:public -- --staged` and review `git diff --cached` before the first commit.
-- [ ] Confirm no API keys, runtime files, databases, agent-hook backups, local paths, logs, or private screenshots appear in that diff.
+- [x] Document the integration limitations without claiming every agent version or approval state is supported.
+- [x] Use the owner's GitHub no-reply commit identity in this repository.
+- [x] Review and audit the initial staged source, docs, tests, configuration, and lockfile before committing.
+- [x] Check the public file set for credentials, runtime files, databases, hook backups, local paths, logs, and private screenshots. The included preview contains synthetic test content.
 
 `.gitignore` protects ordinary `git add`, not forced additions, past commits, or hand-made ZIPs. The audit script is a targeted pattern check rather than a guarantee. Local encrypted keys and lesson databases should remain private too.
 
 ## Repository and launch
 
-- [ ] Create an empty GitHub repository with the chosen name and description; connect this checkout and publish the reviewed first commit.
-- [ ] Enable private vulnerability reporting and available secret scanning/push protection. Use read-only CI permissions; never supply private API keys to competition PRs.
-- [ ] Confirm CI passes on GitHub. Consider protecting the default branch and requiring review/checks before merging external contributions.
+- [x] Publish the reviewed source to [Hudaifa-Ghula/wAIt](https://github.com/Hudaifa-Ghula/wAIt) on `main`.
+- [x] Enable private vulnerability reporting, secret scanning, and push protection. CI has read-only repository permissions and no private API keys.
+- [x] Confirm the initial source commit passes [GitHub CI](https://github.com/Hudaifa-Ghula/wAIt/actions/runs/37643133805). Continue requiring successful checks when reviewing contributions.
 - [x] Set the deadline to the end of November 7, 2026, Tripoli time (before November 8 at 00:00, UTC+2), and confirm that merging is not required to qualify or win.
 - [ ] Finalize the remaining challenge details: prize tier/duration/delivery, eligibility, and submission rules. Announce direct judging versus voting before judging/voting begins.
 - [ ] Tag the approved commit and publish release notes as an experimental release. Source downloads should come from Git's committed tree. Do not upload local runtime directories or unreviewed VSIX/browser packages.

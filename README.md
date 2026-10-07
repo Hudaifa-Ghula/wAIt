@@ -49,9 +49,11 @@ Learn opens first. Choose **Switch to Instagram Reels** for the key-free flow; l
 
 ### 1. Install and start the companion
 
-Clone or download this repository, open a terminal in its folder, and run:
+Clone the repository and install from its folder:
 
 ```powershell
+git clone https://github.com/Hudaifa-Ghula/wAIt.git
+cd wAIt
 npm ci
 npm start
 ```
@@ -122,7 +124,7 @@ Submit a PR that solves a meaningful problem or adds useful functionality. A wel
 - **What counts:** solving real problems, useful functionality, correctness, and maintainable work—not lines changed or PR volume.
 - **No merge required:** a submitted PR can qualify and win even if it is not merged. The maintainer decides which changes enter the project.
 
-The challenge opens with the public launch after the remaining details are finalized. Read the [challenge details and announcement](docs/PR-CHALLENGE.md) and [contribution guide](CONTRIBUTING.md). AI-assisted PRs are welcome when you understand and validate the work.
+The source is public; competition entries open after the remaining details are finalized and the opening is announced. Read the [challenge details and announcement](docs/PR-CHALLENGE.md) and [contribution guide](CONTRIBUTING.md). AI-assisted PRs are welcome when you understand and validate the work.
 
 ## How it fits together
 
